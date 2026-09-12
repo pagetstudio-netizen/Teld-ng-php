@@ -14,3 +14,4 @@
 - [Transactional security](transactional-security.md) — Ledger mutations need database gates; geographic headers require a trusted edge.
 - [Automatic deposit verification](automatic-deposit-verification.md) — Deposits must use configured automatic providers; never fall back to payment numbers or screenshots.
 - [Vite dependency cache](vite-dependency-cache.md) — Restart the application workflow after lockfile changes when the preview reports 504 Outdated Optimize Dep.
+- [Git history backup](git-history-purge.md) — Shallow repositories need boundary metadata stored with a pre-rewrite bundle.
