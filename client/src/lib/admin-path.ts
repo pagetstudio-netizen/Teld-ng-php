@@ -1,0 +1,1 @@
+export const ADMIN_PATH = "/mgmt-1np5g23g12";

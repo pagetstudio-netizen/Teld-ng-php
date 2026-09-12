@@ -1,0 +1,16 @@
+- [TELD (Tcharging) identity](vestas-platform.md) — Brand, charging-network positioning and official #00ABB7 interface palette.
+- [WestPay Integration](westpay-integration.md) — Redirect-based deposit flow + HMAC webhook; per-country API keys for withdrawals; secrets only (never in code/DB).
+- [WestPay payment correlation](westpay-payment-correlation.md) — Automatic credits need a signed order and amount, not a browser-provided transaction reference.
+- [SendavaPay integration](sendavapay-integration.md) — Payin deposit flow: backend creates+initiates, user phone auto-used, OTP/redirect handled, webhook HMAC verified.
+- [Imported database setup](imported-database-setup.md) — Preserve an existing Replit session table when applying a first-run Drizzle schema.
+- [Plesk GitHub deployment](plesk-github-deployment.md) — Plesk pulls a committed dist build and starts dist/index.cjs relative to the application root.
+- [Login privacy](login-privacy.md) — Do not persist passwords or phone numbers in browser storage; privacy scans classify remembered phone numbers as sensitive.
+- [TON green theme](ton-green-theme.md) — Apply TON green branding outside the dashboard; keep the dashboard’s current visual identity unchanged.
+- [Chat attachment availability](attachment-availability.md) — Reference images may arrive late or under a prefixed attached_assets filename.
+- [English localization](english-localization.md) — Keep user-facing text and formats in English while preserving technical identifiers and migrating only known legacy labels.
+- [Country currency boundary](country-currency-boundary.md) — Keep the ledger in PHP base units; convert only at country-facing and provider boundaries.
+- [Dynamic country configuration](dynamic-country-configuration.md) — Country activation and operator edits are database-owned; bootstrap defaults must never overwrite admin changes.
+- [SeaPay pay-in support](seapay-integration.md) — NG payout bank codes are published; NGN pay-in pay_type values remain merchant-specific and must not reuse payout codes.
+- [Transactional security](transactional-security.md) — Ledger mutations need database gates; geographic headers require a trusted edge.
+- [Automatic deposit verification](automatic-deposit-verification.md) — Deposits must use configured automatic providers; never fall back to payment numbers or screenshots.
+- [Vite dependency cache](vite-dependency-cache.md) — Restart the application workflow after lockfile changes when the preview reports 504 Outdated Optimize Dep.

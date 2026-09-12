@@ -1,0 +1,11 @@
+Options -MultiViews
+RewriteEngine On
+
+# Laisser les appels API passer vers Node.js.
+# Les fichiers physiques restent servis directement par Apache.
+# React utilise le routage côté client : /login, /deposit, /team, etc.
+# doivent charger le même index.html lors d'un rafraîchissement direct.
+RewriteCond %{REQUEST_URI} !^/api(?:/|$)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <meta name="google" content="notranslate" />
+    <meta name="theme-color" content="#00ABB7" />
+    <meta name="description" content="TELD (Tcharging) is a leading company with one of the country's largest networks of connected charging stations." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TELD (Tcharging)" />
+    <meta property="og:description" content="TELD (Tcharging) is a leading company with one of the country's largest networks of connected charging stations." />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/teld-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="TELD (Tcharging)" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TELD (Tcharging)" />
+    <meta name="twitter:description" content="TELD (Tcharging) is a leading company with one of the country's largest networks of connected charging stations." />
+    <meta name="twitter:image" content="/teld-og.jpg" />
+    
+    <link rel="icon" type="image/png" href="/favicon.png?v=teld" />
+    <link rel="apple-touch-icon" href="/favicon.png?v=teld" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      // Capture install prompt as early as possible before React mounts
+      window._installPrompt = null;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        window._installPrompt = e;
+      });
+      window.addEventListener('appinstalled', function() {
+        window._appInstalled = true;
+      });
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>TELD (Tcharging)</title>
+  </head>
+  <body class="notranslate">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

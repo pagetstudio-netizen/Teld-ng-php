@@ -1,0 +1,70 @@
+uploads = []
+
+[[generated]]
+id = "tp56GvLWfB-M1j6XtANvz"
+uri = "file://client/public/withdrawal-banner.png"
+type = "image"
+title = "industrial robots dark blue banner"
+
+[[outputs]]
+id = "PL4-GNtW1CRsLuKZn07yS"
+uri = "file://plesk-deploy-bundle.zip"
+type = "unspecified"
+title = "Paquet de déploiement Plesk"
+logical_id = "4d209af6-6073-4498-bcc4-f4b53de399c5"
+
+[[outputs]]
+id = "uYcQRwR1QkKpFht7FLb6u"
+uri = "file://attached_assets/image_search/teld-equipment.png"
+type = "image"
+title = "Équipement TELD"
+description = "Visuel public provenant du site officiel teld.com.br, destiné aux produits TELD."
+logical_id = "3d2b9612-79c2-47e5-921c-ad402123935c"
+content_hash = "sha256:021d10c8b5326824b8bd6b8de0e381b45249fb2d3f5c2df776a454e0bc69610e"
+size = 145552
+mtime_ms = 1787508761500
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:de01a3ac-4724-4b3c-ac70-00dc37b16c58/3d2b9612-79c2-47e5-921c-ad402123935c/93a9cb25-8855-4043-9ede-9b5d362a0d21"
+storage_version_token = "1787508762578550"
+content_type = "image/png"
+
+[[outputs]]
+id = "LrvboowSkmsygXrJSF5Gx"
+uri = "file://attached_assets/image_search/teld-faria-lima.jpg"
+type = "image"
+title = "Station TELD Faria Lima"
+description = "Visuel public provenant du site officiel teld.com.br, destiné aux produits TELD."
+logical_id = "561ef72f-5687-46e7-8b8c-5dacf5f8e485"
+content_hash = "sha256:703375122f89943ff43f3360fbbe8a9915033ad74d9c08057b5803eed2d391a0"
+size = 99240
+mtime_ms = 1787508761644
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:de01a3ac-4724-4b3c-ac70-00dc37b16c58/561ef72f-5687-46e7-8b8c-5dacf5f8e485/805f47fc-c7a7-456f-8557-d4b44ea7ffd1"
+storage_version_token = "1787508763166267"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "Dbpao_R5osZVe___Pmxgl"
+uri = "file://attached_assets/image_search/teld-bandeirantes.jpg"
+type = "image"
+title = "Station TELD Bandeirantes"
+description = "Visuel public provenant du site officiel teld.com.br, destiné aux produits TELD."
+logical_id = "675e5816-30fa-4d0e-97ff-fcd01aa00567"
+content_hash = "sha256:2fc55989cd7f7dc162778616b5120db2c0a5ed14f2e0b17f388e33852fb43850"
+size = 64436
+mtime_ms = 1787508761788
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:de01a3ac-4724-4b3c-ac70-00dc37b16c58/675e5816-30fa-4d0e-97ff-fcd01aa00567/660ad8f2-af59-4700-95f4-5f212c512a69"
+storage_version_token = "1787508763741069"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "NYH2zZ9fHXCAw4fVTwDIv"
+uri = "file://attached_assets/image_search/teld-campo-belo.jpg"
+type = "image"
+title = "Station TELD Campo Belo"
+description = "Visuel public provenant du site officiel teld.com.br, destiné aux produits TELD."
+logical_id = "9f4a3123-90bc-4631-901b-77986e7e427c"
+content_hash = "sha256:bdb138a5715ca88025da11cd3def9433338ef2c668b2066145679040d409f9a8"
+size = 122714
+mtime_ms = 1787508761928
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:de01a3ac-4724-4b3c-ac70-00dc37b16c58/9f4a3123-90bc-4631-901b-77986e7e427c/250b854d-762e-4a99-bb0f-9cef22d1cf46"
+storage_version_token = "1787508764310785"
+content_type = "image/jpeg"

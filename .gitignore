@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+.cache
+.local
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.zip

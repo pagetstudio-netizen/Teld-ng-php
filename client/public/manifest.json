@@ -1,0 +1,24 @@
+{
+  "name": "TELD (Tcharging)",
+  "short_name": "TELD",
+  "description": "TELD (Tcharging) is a leading company with one of the country's largest networks of connected charging stations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00ABB7",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.png?v=teld",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png?v=teld",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
