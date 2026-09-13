@@ -18,6 +18,16 @@ Replit or legacy domain after the app is moved to Plesk.
 **How to apply:** Set `PUBLIC_APP_URL` to the final HTTPS origin in Plesk
 before enabling any provider that sends browser return URLs.
 
+Payment callback and return URL builders must not contain a legacy production
+domain fallback. In production, a missing `PUBLIC_APP_URL` should fail the
+payment request explicitly; only development may use the Replit domain.
+
+**Why:** A successful deployment with a forgotten URL variable must not
+silently send payment confirmations or users to an unrelated old host.
+
+**How to apply:** Check every provider flow when changing deployment domains,
+and configure provider-specific callback URLs in Plesk where supported.
+
 When GitHub has been synchronized through its API, the local Git branch may still report an ahead/behind divergence even after the repository files are already identical.
 
 **Why:** The local and remote commits can have different ancestry despite carrying the same tree. A normal push may be rejected, while a force-push could unnecessarily rewrite the remote history.
