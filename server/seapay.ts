@@ -3,9 +3,18 @@ import { SEAPAY_NIGERIA_BANKS } from "@shared/seapay";
 
 const SEAPAY_API_BASE = process.env.SEAPAY_API_BASE || "https://api.seapayglb.me";
 const publicAppUrl = process.env.PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
-export const DEFAULT_SEAPAY_NOTIFY_URL = publicAppUrl
-  ? `${publicAppUrl}/api/seapay/callback/deposit`
-  : "http://autelenergy.cc/api/seapay/callback/deposit";
+
+function getDefaultSeapayNotifyUrl(kind: "deposit" | "withdrawal"): string {
+  const baseUrl =
+    publicAppUrl ||
+    (process.env.NODE_ENV !== "production" && process.env.REPLIT_DEV_DOMAIN
+      ? `https://${process.env.REPLIT_DEV_DOMAIN}`
+      : "");
+  if (!baseUrl) {
+    throw new Error("PUBLIC_APP_URL must be configured for SeaPay callbacks.");
+  }
+  return `${baseUrl}/api/seapay/callback/${kind}`;
+}
 
 type SeapayConfig = {
   country: string;
@@ -58,9 +67,7 @@ export function getSeapayNotifyUrl(country: string, kind: "deposit" | "withdrawa
   const shared = configuredValue(kind === "deposit" ? "SEAPAY_NOTIFY_URL" : "SEAPAY_PAYOUT_NOTIFY_URL");
   if (countrySpecific) return countrySpecific;
   if (shared) return shared;
-  return kind === "deposit"
-    ? (countryCode ? DEFAULT_SEAPAY_NOTIFY_URL : DEFAULT_SEAPAY_NOTIFY_URL)
-    : DEFAULT_SEAPAY_NOTIFY_URL.replace("/deposit", "/withdrawal");
+  return getDefaultSeapayNotifyUrl(kind);
 }
 
 export type SeaPayResponse<T> = {

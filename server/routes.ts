@@ -1384,7 +1384,7 @@ export async function registerRoutes(
         : requestedAshtechReference.startsWith("paget-studio-")
           ? requestedAshtechReference
           : generatedReference;
-      const notifyBaseUrl = process.env.PUBLIC_APP_URL || "https://Tonnew.top";
+      const notifyBaseUrl = getPublicAppBaseUrl(req);
       const result = await ashtechCollect({
         amount: numericAmount,
         currency: activeCountry.currency,
@@ -1594,8 +1594,7 @@ export async function registerRoutes(
       const externalRef = `DEP-${Date.now()}-${user.id}`;
       // Only use the number explicitly entered for this deposit; never reuse the profile phone.
       const customerPhone = sendavapayFormatPhone(payerPhone.trim(), country);
-      const devDomain = process.env.REPLIT_DEV_DOMAIN;
-      const baseUrl = devDomain ? `https://${devDomain}` : "https://sybotx.replit.app";
+      const baseUrl = getPublicAppBaseUrl(req);
       const webhookUrl = `${baseUrl}/api/webhooks/sendavapay`;
 
       const result = await sendavapayCreate({

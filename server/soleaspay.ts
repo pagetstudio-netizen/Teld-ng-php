@@ -141,7 +141,12 @@ export async function initiatePayment(
   const currency = getCurrency(country);
   const configuredAppUrl = process.env.PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
   const baseUrl = configuredAppUrl ||
-    (process.env.REPLIT_DEV_DOMAIN ? `https://${process.env.REPLIT_DEV_DOMAIN}` : "https://intel.replit.app");
+    (process.env.NODE_ENV !== "production" && process.env.REPLIT_DEV_DOMAIN
+      ? `https://${process.env.REPLIT_DEV_DOMAIN}`
+      : "");
+  if (!baseUrl) {
+    throw new Error("PUBLIC_APP_URL must be configured for payment return URLs.");
+  }
 
   const requestBody: SoleaspayPaymentRequest = {
     wallet: formatWallet(wallet, country),
